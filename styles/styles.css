@@ -66,13 +66,21 @@ nav{
     background-color: #f26868;
 }
 
-#time{
+.time{
     font-size: 7rem;
     background-color: #f26868;
     color: #ffff;
 }
 
-.button{
+#minutos{
+    background-color: #f26868;
+}
+
+#segundos{
+    background-color: #f26868;
+}
+
+#button{
     font-size: 1.5rem;
     margin-top: 2rem;
     padding: 0.5rem 2rem;
@@ -81,7 +89,7 @@ nav{
     background-color: #ffff;
 }
 
-.button:hover{
+#button:hover{
     transform: scale(1);
     background-color: #d90e00;
     color: #ffff;
