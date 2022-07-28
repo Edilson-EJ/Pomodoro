@@ -1,23 +1,21 @@
-const minutos = document.getElementById('#minutos');
-const segundos = document.getElementById('#segundos')
-const button = document.querySelector('#button')
+const minutos = document.querySelector('#minutos');
+const segundos = document.querySelector('#segundos');
+const button = document.querySelector('#button');
 
 var pomodoro = 25;
 var pausa = 5;
 var pausa_grande = 15;
 var segun = 0;
 
-console.log(segun)
+minutos.textContent= pomodoro;
+segundos.textContent = segun ;
 
-
-function contagem_regressiva(){
+const contagem = () =>{
 
         minutos.textContent= pomodoro;
         segundos.textContent = segun ;
-        console.log(minutos);
-
-
-        //for(var i =0; 0<=25; i++){}
-
+        
+        const minu = Math.floor(pomodoro / 1000/60) %60; 
+        const segun = Math.floor(segun / 1000/60) %60;
 
 }
