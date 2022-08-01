@@ -1,21 +1,28 @@
-const minutos = document.querySelector('#minutos');
-const segundos = document.querySelector('#segundos');
-const button = document.querySelector('#button');
+var minutosHT = document.getElementById('minutos');
+let segundosHT = document.getElementById('segundos');
+var buttonHT = document.getElementById('button');
 
 var pomodoro = 25;
 var pausa = 5;
 var pausa_grande = 15;
 var segun = 0;
 
-minutos.textContent= pomodoro;
-segundos.textContent = segun ;
+console.log(pomodoro)
 
-const contagem = () =>{
+time();
 
-        minutos.textContent= pomodoro;
-        segundos.textContent = segun ;
+minutosHT.textContent = pomodoro
+segundosHT.textContent = segun + '0'
+
+function time(){
+        var minutos = 25
+        var segundos
         
-        const minu = Math.floor(pomodoro / 1000/60) %60; 
-        const segun = Math.floor(segun / 1000/60) %60;
+        for(i=0; minutosHT != 0; i++){
+                minutos = Math.floor(diferença / 1000 /60) % 60 // minutos
+                segundos = Math.floor(diferença / 1000) % 60
+        }
+
 
 }
+
