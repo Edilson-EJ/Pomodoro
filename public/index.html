@@ -19,19 +19,18 @@
             <div class="menu">
                 <nav>
                     <li>
-                        <button class="ops">Pomodoro</button>
-                        <button class="ops">Intervalo Curto</button>
-                        <button class="ops">Intervalo Grande</button>
+                        <button class="ops" onclick="inicio()">Pomodoro</button>
+                        <button class="ops" onclick="intervalo_curto()">Intervalo Curto</button>
+                        <button class="ops" onclick="intervalo_grande()">Intervalo Grande</button>
                     </li>
                 </nav>
             </div>
 
             <div class="time_class">
-                <div class="time">
-                    <spam id="minutos">00</spam> :
-                    <spam id="segundos">00</spam>
+                <div>
+                    <h1 id="time">00:00</h1>
                 </div>
-                <button id="button" onclick="time()">Começa</button>
+                <button id="button">Começa</button>
             </div>
         </section>
 
