@@ -1,6 +1,10 @@
 *{
     padding: 0;
     margin: 0;
+    
+}
+
+body{
     background-color: #d95550;
 }
 
@@ -21,10 +25,12 @@
     padding-left: 1rem;
 }
 
+
+
 .container{
-    display: flex;
-    box-shadow: 0 0 1em #ffff;
+    
     background-color: #f26868;
+    display: flex;
     width: 30%;
     flex-direction: column;
     justify-content: center;
@@ -35,10 +41,7 @@
     padding: 1rem 0 1rem 0;
 }
 
-.menu nav li {
-    background-color: #f26868;
 
-}
 
 nav{
     text-decoration: none;
@@ -63,22 +66,14 @@ nav{
     display: flex;
     margin-top: 2rem;
     flex-direction: column;
-    background-color: #f26868;
 }
 
 #time{
     font-size: 7rem;
-    background-color: #f26868;
     color: #ffff;
 }
 
-#minutos{
-    background-color: #f26868;
-}
 
-#segundos{
-    background-color: #f26868;
-}
 
 #button{
     font-size: 1.5rem;
@@ -97,21 +92,53 @@ nav{
 
 
 .quant_pom{
-    box-shadow: 0 0 1em #ffff;
+    background-color: #f26868;
+    box-shadow: 0 0 3px  black;
     width: 30%;
     margin-left: 35%;
     display: flex;
     justify-content: center;
     margin-top: 4rem;
+    color: #ffff;
 }
 
-.quant_pom h6{
+#total_foco{
+
     padding-right: 1rem;
     font-size: 1.5rem;
     
 }
 
-.quant_pom p{
+#focar{
+    
     padding-right: 1rem;
     font-size: 1.5rem;
 }
+
+.tarefas{
+    background-color: #f26868;
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 35%;
+    text-align: center;
+    align-items: center;
+    margin-top: 3rem;
+    padding: 0rem 0 1rem 0;
+}
+
+.progresso{
+    background-color: #f26868;
+    box-shadow: 0 0 3px  black;
+    display: flex;
+    justify-content: center;
+    color: #ffff;
+    width: 100%;
+}
+
+#tempo{
+    padding-top: 1rem;
+    
+}
+

@@ -9,7 +9,7 @@
     <title>Pomodoro</title>
 </head>
 <body>
-    <main class="pomodoro">
+        <main class="pomodoro">
             <h2>Pomodoro</h2>
             <img src="/img/maça.webp" class="img">
     </main>
@@ -27,22 +27,25 @@
             </div>
 
             <div class="time_class">
-                <div>
                     <h1 id="time">00:00</h1>
-                </div>
-                <button id="button">Começa</button>
             </div>
+            <button id="button" onclick="inicio()">Começa</button>
         </section>
 
         <div class="quant_pom">
-            <h6 id="total_foco">1</h6>
-            <p>Hora de focar!</p>
+            <h6 id="total_foco">#1</h6>
+            <p id="focar">Hora de focar!</p>
         </div>
 
-        <section>
-            
-            <div class="tarefas"></div>
+        <section>  
+            <div class="tarefas">
+                <h2 class="progresso">Progresso </h2>
+                <di id="tempo">
+                    
+                </di>
+            </div>
         </section>
+
 
         <script  src="/js/index.js"></script>
 </body>
