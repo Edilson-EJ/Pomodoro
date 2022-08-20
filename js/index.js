@@ -23,61 +23,72 @@ var bool = false
 time.textContent = pomodoro + ':00'
 
 function inicio(){   
-        button.innerText = 'para';
+        
         container.style.backgroundColor = "#f26868";
         body.style.backgroundColor = "#d95550";
         foco.style.backgroundColor =  "#f26868";
         tarefa.style.backgroundColor =  "#f26868";
         progresso_pessoa.style.backgroundColor = "#f26868";
-        progresso();
-        bool= true
-        usuario(1);
+        time.textContent = pomodoro + ':00'
+        botão(1)
         
 }
 
 function intervalo_curto(){
+        clearInterval(interval)
+        sec = 0
+        min = 0
 
         container.style.backgroundColor = "#768de6"
         body.style.backgroundColor = "#556ed3";
         foco.style.backgroundColor = "#768de6"
         tarefa.style.backgroundColor =  "#768de6";
         progresso_pessoa.style.backgroundColor = "#768de6";
-
         time.textContent = '05:00'
-        progresso();
-        if(bool == true){
-                button.innerText = 'para'
-                usuario(2);
-        }
         
+        botão(2)
         
 }
 
 function intervalo_grande(){
-
         container.style.backgroundColor = "#5e9ca0";
         body.style.backgroundColor =  "#4c9195";
         foco.style.backgroundColor = "#5e9ca0";
         tarefa.style.backgroundColor =  "#5e9ca0";
         progresso_pessoa.style.backgroundColor = "#5e9ca0";
+        time.textContent = '15:00'
 
-        progresso();
-        if(bool == true){
-                button.innerText = 'para'
+        botão(3)
+}
+
+function botão(numero){
+        const num = numero 
+        if( num == 1 ){
+                progresso();
+                bool= true
+                usuario(1);
+        }else if( num == 2){
+                usuario(2);
+                progresso();
+        }else if( num ==3 ){
+                progresso();
                 usuario(3);
         }
-        
+
 }
 
 function usuario(number){
         if(number == 1){
+                
                 interval = setInterval(tempo_estudo,10)
                 console.log('1')
 
         }else if (number == 2){
+        
                 interval = setInterval(pausa_curta,10)
                 console.log('2')
         }else if(number == 3) {
+                
                 interval = setInterval(pausa_longa,10)
                 console.log('3')
         }else{

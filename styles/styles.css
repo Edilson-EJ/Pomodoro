@@ -93,7 +93,7 @@ nav{
 
 .quant_pom{
     background-color: #f26868;
-    box-shadow: 0 0 3px  black;
+    box-shadow: 0 0 0 ;
     width: 30%;
     margin-left: 35%;
     display: flex;
@@ -130,7 +130,7 @@ nav{
 
 .progresso{
     background-color: #f26868;
-    box-shadow: 0 0 3px  black;
+    box-shadow: 0 0 0 1px  black;
     display: flex;
     justify-content: center;
     color: #ffff;
