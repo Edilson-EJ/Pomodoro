@@ -1,5 +1,5 @@
 var time = document.getElementById('time');
-var button = document.getElementById('button');
+var buttom = document.getElementById('button');
 var container = document.querySelector('.container')
 var body = document.querySelector('body')
 var foco = document.querySelector('.quant_pom');
@@ -7,7 +7,7 @@ var prog = document.getElementById('tempo')
 var tarefa = document.querySelector('.tarefas')
 var progresso_pessoa = document.querySelector('.progresso')
 
-
+var text = 'olá'
 var pomodoro = 25;
 var pausa = 5;
 var pausa_grande = 15;
@@ -30,7 +30,12 @@ function inicio(){
         tarefa.style.backgroundColor =  "#f26868";
         progresso_pessoa.style.backgroundColor = "#f26868";
         time.textContent = pomodoro + ':00'
-        botão(1)
+        buttom.innerHTML = "PARA"
+
+        usuario(1);
+        progresso();
+        bool= true
+
         
 }
 
@@ -45,9 +50,9 @@ function intervalo_curto(){
         tarefa.style.backgroundColor =  "#768de6";
         progresso_pessoa.style.backgroundColor = "#768de6";
         time.textContent = '05:00'
-        
-        botão(2)
-        
+
+        usuario(2);
+        progresso();
 }
 
 function intervalo_grande(){
@@ -58,44 +63,32 @@ function intervalo_grande(){
         progresso_pessoa.style.backgroundColor = "#5e9ca0";
         time.textContent = '15:00'
 
-        botão(3)
+        progresso();
+        usuario(3);
 }
 
-function botão(numero){
-        const num = numero 
-        if( num == 1 ){
-                progresso();
-                bool= true
-                usuario(1);
-        }else if( num == 2){
-                usuario(2);
-                progresso();
-        }else if( num ==3 ){
-                progresso();
-                usuario(3);
-        }
 
-}
 
 function usuario(number){
         if(number == 1){
                 
                 interval = setInterval(tempo_estudo,10)
                 console.log('1')
-
+                text = 'bons estudos'
         }else if (number == 2){
-        
                 interval = setInterval(pausa_curta,10)
                 console.log('2')
+                text = 'bora descansa'
         }else if(number == 3) {
                 
                 interval = setInterval(pausa_longa,10)
                 console.log('3')
+                text = 'hora de uma boa pausa'
         }else{
                 number=0;
                 pomo++
                 total_foco.innerText = '#' + pomo
-                button.innerText = "Começa"
+                buttom.innerText = "Começa"
                 window.alert('parabéns você esta no seu ' + pomo + ' pomodoro!!')
                 zero();
         }
@@ -188,7 +181,7 @@ function progresso(){
 
         const horario = new Date().toLocaleTimeString(); 
 
-        conteudo.textContent = pomo + ' - '+ horario;
+        conteudo.textContent = pomo + ' - '+ horario + '  ' + text;
 
         divNova.appendChild(conteudo);
         divPro.appendChild(divNova);
