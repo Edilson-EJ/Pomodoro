@@ -49,6 +49,7 @@ function intervalo_curto(){
         foco.style.backgroundColor = "#768de6"
         tarefa.style.backgroundColor =  "#768de6";
         progresso_pessoa.style.backgroundColor = "#768de6";
+        buttom.innerHTML = "PARA"
         time.textContent = '05:00'
 
         usuario(2);
@@ -61,6 +62,7 @@ function intervalo_grande(){
         foco.style.backgroundColor = "#5e9ca0";
         tarefa.style.backgroundColor =  "#5e9ca0";
         progresso_pessoa.style.backgroundColor = "#5e9ca0";
+        buttom.innerHTML = "PARA"
         time.textContent = '15:00'
 
         progresso();
@@ -72,16 +74,16 @@ function intervalo_grande(){
 function usuario(number){
         if(number == 1){
                 
-                interval = setInterval(tempo_estudo,10)
+                interval = setInterval(tempo_estudo,1000)
                 console.log('1')
                 text = 'bons estudos'
         }else if (number == 2){
-                interval = setInterval(pausa_curta,10)
+                interval = setInterval(pausa_curta,1000)
                 console.log('2')
                 text = 'bora descansa'
         }else if(number == 3) {
                 
-                interval = setInterval(pausa_longa,10)
+                interval = setInterval(pausa_longa,1000)
                 console.log('3')
                 text = 'hora de uma boa pausa'
         }else{
@@ -101,7 +103,7 @@ function tempo_estudo(){
         if(sec== 60){
                 min++
                 sec=0
-                if( min == 10){
+                if( min == 25){
                         window.alert('fim!!')
                         usuario(0);
                         
